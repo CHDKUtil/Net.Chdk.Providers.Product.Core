@@ -2,6 +2,6 @@
 {
     public interface IProductProvider
     {
-        string[] GetProducts();
+        string[] GetProductNames();
     }
 }
