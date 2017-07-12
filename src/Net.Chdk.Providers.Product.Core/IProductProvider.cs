@@ -3,5 +3,6 @@
     public interface IProductProvider
     {
         string[] GetProductNames();
+        string GetCategoryName(string productName);
     }
 }
