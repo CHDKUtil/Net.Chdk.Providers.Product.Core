@@ -2,6 +2,7 @@
 {
     public interface IProductProvider
     {
+        string[] GetCategoryNames();
         string[] GetProductNames();
         string GetCategoryName(string productName);
     }
