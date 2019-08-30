@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <VersionSuffix>alpha</VersionSuffix>
     <Product>CHIMP</Product>
     <Authors>Dmitry Shechtman</Authors>
@@ -18,16 +18,21 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Net.Chdk.Providers.Product.Core</Title>
     <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
+    <PackageLicenseExpression>GPL-2.0-or-later</PackageLicenseExpression>
     <PackageIconUrl>https://raw.githubusercontent.com/CHDKUtil/CHIMP/master/tiny.png</PackageIconUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/CHDKUtil/Net.Chdk.Providers.Product.Core/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CHDKUtil/Net.Chdk.Providers.Product.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CHDKUtil/Net.Chdk.Providers.Product.Core</RepositoryUrl>
     <PackageTags>chimp provider product core</PackageTags>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <TreatSpecificWarningsAsErrors />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
   </PropertyGroup>
 
 </Project>
